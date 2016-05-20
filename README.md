@@ -16,6 +16,7 @@ dependencies {
 }
 ```
 
+## Sample Code
 ```xml
 <io.github.didikk.slider.library.SliderLayout
         android:id="@+id/slider"
