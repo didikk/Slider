@@ -1,4 +1,4 @@
-#Slider
+# Slider
 Image slider
 
 ## Cara Instal
@@ -12,7 +12,7 @@ repositories {
 Dan tambahkan dependency
 ```gradle
 dependencies {
-    compile 'com.github.didikk:slider:0.0.1'
+    compile 'com.github.didikk:slider:0.0.2'
 }
 ```
 
