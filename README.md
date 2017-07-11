@@ -1,4 +1,4 @@
-#SLider
+#Slider
 Image slider
 
 ## Cara Instal
