@@ -12,7 +12,7 @@ repositories {
 Dan tambahkan dependency
 ```gradle
 dependencies {
-    compile 'com.github.didikk:slider:0.0.2'
+    compile 'com.github.didikk:slider:1.0.0'
 }
 ```
 
