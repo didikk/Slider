@@ -14,7 +14,8 @@ import io.github.didikk.slider.library.SliderTypes.BaseSliderView;
 import io.github.didikk.slider.library.SliderTypes.TextSliderView;
 import io.github.didikk.slider.library.Tricks.ViewPagerEx;
 
-public class MainActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
+public class MainActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener,
+        ViewPagerEx.OnPageChangeListener {
 
     private SliderLayout imageSlider;
 
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageSlider = (SliderLayout)findViewById(R.id.slider);
+        imageSlider = (SliderLayout) findViewById(R.id.slider);
 
-        HashMap<String,String> url_maps = new HashMap<String, String>();
+        HashMap<String, String> url_maps = new HashMap<String, String>();
         url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
         url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
         url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         file_maps.put("House of Cards",R.drawable.house);
         file_maps.put("Game of Thrones", R.drawable.game_of_thrones);*/
 
-        for(String name : url_maps.keySet()){
+        for (String name : url_maps.keySet()) {
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout
             textSliderView
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             //add your extra information
             textSliderView.bundle(new Bundle());
             textSliderView.getBundle()
-                    .putString("extra",name);
+                    .putString("extra", name);
 
             imageSlider.addSlider(textSliderView);
         }
@@ -70,11 +71,12 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     @Override
     public void onSliderClick(BaseSliderView slider) {
-        Toast.makeText(this,slider.getBundle().get("extra") + "",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    }
 
     @Override
     public void onPageSelected(int position) {
@@ -82,5 +84,6 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     }
 
     @Override
-    public void onPageScrollStateChanged(int state) {}
+    public void onPageScrollStateChanged(int state) {
+    }
 }
